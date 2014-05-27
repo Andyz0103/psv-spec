@@ -10,10 +10,10 @@ PSV is a text based data format for tabular data. It is similar to [CSV](http://
 4. Every row consists of one or more fields separated by a pipe character
 5. There are no leading or trainling pipe characters
 6. Some characters are escaped by a leading backslash
-   * carriage return: \r
-   * line feed: \n
-   * backslash: \\
-   * pipe character; \|
+    * carriage return: \r
+    * line feed: \n
+    * backslash: \\\\
+    * pipe character: \\|
 7. All other characters preceeded by a backslash are treated as is
 
 ## PSV in Depth
@@ -40,10 +40,12 @@ A leading or trailing pipe character in a line represents an additional empty fi
 ### 6. Some characters are escaped by a leading backslash
 
 The following characters in a fields content are treated special by escaping them with a leading backslash:
-   * carriage return: \r
-   * line feed: \n
-   * backslash: \\
-   * pipe character; \|
+
+* carriage return: \r
+* line feed: \n
+* backslash: \\\\
+* pipe character: \\|
+
 This is one of the core aspects of PSV!
 
 ### 7. All other characters preceeded by a backslash are treated as is
