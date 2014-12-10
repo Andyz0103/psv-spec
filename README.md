@@ -31,7 +31,7 @@ If the last line in a PSV stream contains a CRLF or LF line ending, the parser w
 
 ### 4. Every row consists of one or more fields separated by a pipe character
 
-Every row has at least one field. Multple fields are saprated by the pipe character "|".
+Every row has at least one field. Multiple fields are separated by the pipe character "|".
 
 ### 5. There are no leading or trailing pipe characters
 
