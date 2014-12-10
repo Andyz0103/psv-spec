@@ -16,6 +16,63 @@ PSV is a text based data format for tabular data. It is similar to [CSV](http://
     * pipe character: \\|
 7. All other characters preceeded by a backslash are treated as is
 
+## Comparison to CSV (RFC 4180)
+
+### One line sample
+
+CSV:
+```
+aaa,bbb,ccc
+```
+
+PSV:
+```
+aaa|bbb|ccc
+```
+
+### Double quoted field and multiple lines
+
+CSV:
+```
+"aaa","bbb","ccc"<CRLF>
+zzz,yyy,xxx
+```
+
+PSV:
+```
+aaa|bbb|ccc<CRLF>
+zzz|yyy|xxx
+```
+
+### Fields containing lines breaks
+
+CSV:
+```
+"aaa","b<CRLF>
+bb","ccc"<CRLF>
+zzz,yyy,xxx
+```
+
+PSV:
+```
+aaa|b\nbb|ccc<CRLF>
+zzz|yyy|xxx
+```
+
+### Fields containing separators and quotes
+
+CSV:
+```
+"aaa","b""bb","ccc"<CRLF>
+zzz,"yy,y",xxx
+```
+
+PSV:
+```
+aaa|b"bb|ccc<CRLF>
+zzz|yy\|y|xxx
+```
+
 ## PSV in Depth
 
 ### 1. PSV files are text files encoded with UTF-8
